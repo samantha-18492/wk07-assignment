@@ -16,10 +16,20 @@ export function Home() {
 
   return (
     <>
-      <p>Home page content so a list of all destination cards</p>
-      {/* fetch and display all destinations
-      we'll need useEffect to prevent the request from repeatedly asking the api for the data 
-      once we have that data, we need to loop through using .map*/}
+      <p>
+        I want to add a button here which allows a user to filter destinations
+        by type and duration
+      </p>
+      {destinations.map((destination) => (
+        <button key={destination.id}>
+          <img src={destination.image_url} alt={destination.image_alt} />
+          <p>
+            Destination: {destination.city}, {destination.country}
+          </p>
+          <p>Type: {destination.type}</p>
+          <p>Duration: {destination.duration}</p>
+        </button>
+      ))}
     </>
   );
 }
