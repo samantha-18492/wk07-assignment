@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react";
+
 export function Home() {
+  const [destinations, setDestinations] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:8080");
+      const data = await response.json();
+      setDestinations(data);
+    }
+    fetchData();
+  }, []);
+
+  console.log(destinations);
+
   return (
     <>
       <p>Home page content so a list of all destination cards</p>
