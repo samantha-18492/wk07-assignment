@@ -15,11 +15,12 @@ const db = new pg.Pool({
   connectionString: process.env.DB_CONN,
 });
 
-app.get("/", (req, res) => {
-  res.send("You are looking at my root route");
+app.get("/", async (req, res) => {
+  const result = await db.query(`SELECT * FROM destination_details`);
+  res.json(result.rows);
 });
 
-app.post("/destinations", (req, res) => {
+app.post("/destination", (req, res) => {
   res.send("This is the post endpoint of destinations");
 });
 
