@@ -20,8 +20,12 @@ app.get("/", async (req, res) => {
   res.json(result.rows);
 });
 
-app.post("/destination", (req, res) => {
-  res.send("This is the post endpoint of destinations");
+app.get("/destination/:id", async (req, res) => {
+  const id = req.params.id;
+  const result = (
+    await db.query(`SELECT * FROM destination_details WHERE id= $1`, [id])
+  ).rows[0];
+  res.json(result);
 });
 
 app.listen(8080, function () {

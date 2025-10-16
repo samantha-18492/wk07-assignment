@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Home() {
-  const [destinations, setDestinations] = useState(null);
+  const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
