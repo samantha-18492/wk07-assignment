@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router";
 
 export function IndividualDestination() {
   const [destinationInfo, setDestinationInfo] = useState({});
@@ -22,7 +23,7 @@ export function IndividualDestination() {
   return (
     <div>
       {destinationInfo ? (
-        <div>
+        <div key={destinationInfo.id}>
           <img
             src={destinationInfo.image_url}
             alt={destinationInfo.image_alt}
@@ -36,6 +37,9 @@ export function IndividualDestination() {
             <p>{destinationInfo.description}</p>
             <p>Noteworthy landmarks: {destinationInfo.landmarks}</p>
           </div>
+          <Link to="/">
+            <button>Back</button>
+          </Link>
         </div>
       ) : (
         <p>No destination was found</p>
