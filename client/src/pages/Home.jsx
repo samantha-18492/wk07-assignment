@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 export function Home() {
   const [destinations, setDestinations] = useState([]);
@@ -21,14 +22,16 @@ export function Home() {
         by type and duration
       </p>
       {destinations.map((destination) => (
-        <button key={destination.id}>
-          <img src={destination.image_url} alt={destination.image_alt} />
-          <p>
-            Destination: {destination.city}, {destination.country}
-          </p>
-          <p>Type: {destination.type}</p>
-          <p>Duration: {destination.duration}</p>
-        </button>
+        <Link to={`/destination/${destination.id}`} key={destination.id}>
+          <button>
+            <img src={destination.image_url} alt={destination.image_alt} />
+            <p>
+              Destination: {destination.city}, {destination.country}
+            </p>
+            <p>Type: {destination.type}</p>
+            <p>Duration: {destination.duration}</p>
+          </button>
+        </Link>
       ))}
     </>
   );
