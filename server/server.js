@@ -44,7 +44,7 @@ app.post("/destination/:id", async (req, res) => {
   const destinationIdFromClient = body.destinationId;
 
   const data = await db.query(
-    `INSERT INTO destination_reviews (destination_id, name, comment) VALUES ($1, $2)`,
+    `INSERT INTO destination_reviews (destination_id, name, comment) VALUES ($1, $2, $3)`,
     [destinationIdFromClient, nameFromClient, commentFromClient]
   );
   res.json({ status: `Review inserted into database` });
