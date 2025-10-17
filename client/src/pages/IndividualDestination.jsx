@@ -8,8 +8,6 @@ export function IndividualDestination() {
 
   const params = useParams();
   const destinationId = params.id;
-  console.log(`Hello ${destinationInfo}`);
-  console.log(`Hello ${destinationId}`);
 
   useEffect(() => {
     async function fetchData() {

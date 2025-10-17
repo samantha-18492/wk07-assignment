@@ -13,9 +13,6 @@ export function DestinationReview() {
         `http://localhost:8080/destination/${destinationId}`
       );
       const data = await response.json();
-      {
-        console.log(`Here is my: ${data}`);
-      }
       setReviews(data.reviews);
     }
     fetchData();
