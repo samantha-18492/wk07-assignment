@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 
 export function Home() {
   const [destinations, setDestinations] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     async function fetchData() {
@@ -13,6 +14,12 @@ export function Home() {
     fetchData();
   }, []);
 
+  if (searchParams.get("sortBy") === "asc") {
+    destinations.sort((a, b) => (a.city > b.city ? 1 : -1));
+  } else if (searchParams.get("sortBy") === "desc") {
+    destinations.sort((a, b) => (a.city > b.city ? 1 : -1)).reverse();
+  }
+
   console.log(destinations);
 
   return (
@@ -21,6 +28,17 @@ export function Home() {
         I want to add a button here which allows a user to filter destinations
         by type and duration
       </p>
+      <div>
+        <label>Destination: </label>
+        <select
+          defaultValue=""
+          onChange={(event) => setSearchParams({ sortBy: event.target.value })}
+        >
+          <option value="">---</option>
+          <option value="asc">Sort by asc</option>
+          <option value="desc">Sort by desc</option>
+        </select>
+      </div>
       {destinations.map((destination) => (
         <Link to={`/destination/${destination.id}`} key={destination.id}>
           <button>
