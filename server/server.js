@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
@@ -22,10 +22,19 @@ app.get("/", async (req, res) => {
 
 app.get("/destination/:id", async (req, res) => {
   const id = req.params.id;
-  const result = (
+
+  const details = (
     await db.query(`SELECT * FROM destination_details WHERE id= $1`, [id])
   ).rows[0];
-  res.json(result);
+
+  const reviews = (
+    await db.query(
+      `SELECT * FROM destination_reviews WHERE destination_id=$1`,
+      [id]
+    )
+  ).rows;
+
+  res.json({ ...details, reviews });
 });
 
 app.listen(8080, function () {
