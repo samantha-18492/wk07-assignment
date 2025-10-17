@@ -3,18 +3,21 @@ import { useParams } from "react-router";
 import { DestinationReview } from "./DestinationReview";
 
 export function Form() {
-  const [formValues, setFormValues] = useState({});
   const params = useParams();
   const destinationId = params.id;
+
+  const [formValues, setFormValues] = useState({
+    destinationId: destinationId,
+  });
 
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(`Destination Id: ${destinationId}`);
 
-    await fetch(`/destination/${destinationId}`, {
+    await fetch(`http://localhost:8080/destination/${destinationId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...formValues, destinationId }),
+      body: JSON.stringify(formValues),
     });
   }
 
@@ -25,7 +28,6 @@ export function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input name="destinationId" type="hidden" value={destinationId} />
         <label htmlFor="name">Name</label>
         <input
           type="text"
