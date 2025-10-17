@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router";
+import "./Home.css";
 
 export function Home() {
   const [destinations, setDestinations] = useState([]);
