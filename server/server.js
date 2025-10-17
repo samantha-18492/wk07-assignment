@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express, { json, response } from "express";
 import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
@@ -35,6 +35,19 @@ app.get("/destination/:id", async (req, res) => {
   ).rows;
 
   res.json({ ...details, reviews });
+});
+
+app.post("/destination/:id", async (req, res) => {
+  const body = req.body;
+  const nameFromClient = body.name;
+  const commentFromClient = body.comment;
+  const destinationIdFromClient = body.destinationId;
+
+  const data = await db.query(
+    `INSERT INTO destination_reviews (destination_id, name, comment) VALUES ($1, $2)`,
+    [destinationIdFromClient, nameFromClient, commentFromClient]
+  );
+  res.json({ status: `Review inserted into database` });
 });
 
 app.listen(8080, function () {
