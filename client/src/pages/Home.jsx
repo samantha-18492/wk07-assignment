@@ -24,7 +24,7 @@ export function Home() {
   console.log(destinations);
 
   return (
-    <>
+    <section>
       <p>
         I want to add a button here which allows a user to filter destinations
         by type and duration
@@ -52,6 +52,6 @@ export function Home() {
           </button>
         </Link>
       ))}
-    </>
+    </section>
   );
 }

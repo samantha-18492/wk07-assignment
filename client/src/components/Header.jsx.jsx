@@ -1,10 +1,18 @@
 import { Link } from "react-router";
+import "./Header.css";
 
 export function Header() {
   return (
     <header>
-      <p>App title</p>
-      <Link to="/">Search</Link> | <Link to="/about">About</Link>
+      <h1>Wanderly</h1>
+      <nav>
+        <Link to="/" className="link">
+          Search
+        </Link>
+        <Link to="/about" className="link">
+          About
+        </Link>
+      </nav>
     </header>
   );
 }

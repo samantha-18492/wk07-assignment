@@ -1,8 +1,16 @@
+section {
+  margin-top: 4em;
+}
+
 button {
-  border: solid 0.2rem #dedcff;
+  border: solid 0.2rem #45458b;
   margin: 1rem;
 }
 
 button:hover {
-  border: solid 0.2rem#45458b;
+  background-color: #fcf3d9;
+}
+
+.link {
+  color: #45458b;
 }
