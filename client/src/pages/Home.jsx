@@ -29,14 +29,14 @@ export function Home() {
         by type and duration
       </p>
       <div>
-        <label>Destination: </label>
+        <label>Sort by: </label>
         <select
           defaultValue=""
           onChange={(event) => setSearchParams({ sortBy: event.target.value })}
         >
           <option value="">---</option>
-          <option value="asc">Sort by asc</option>
-          <option value="desc">Sort by desc</option>
+          <option value="asc">A - Z</option>
+          <option value="desc">Z - A</option>
         </select>
       </div>
       {destinations.map((destination) => (

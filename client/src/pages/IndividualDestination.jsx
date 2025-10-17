@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router";
+import { Form } from "../components/Form";
 
 export function IndividualDestination() {
   const [destinationInfo, setDestinationInfo] = useState({});
@@ -37,12 +38,18 @@ export function IndividualDestination() {
             <p>{destinationInfo.description}</p>
             <p>Noteworthy landmarks: {destinationInfo.landmarks}</p>
           </div>
+          <Form />
           <Link to="/">
             <button>Back</button>
           </Link>
         </div>
       ) : (
-        <p>No destination was found</p>
+        <div>
+          <p>No destination was found</p>
+          <Link to="/">
+            <button>Back</button>
+          </Link>
+        </div>
       )}
     </div>
   );
