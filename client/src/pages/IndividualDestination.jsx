@@ -54,7 +54,3 @@ export function IndividualDestination() {
     </section>
   );
 }
-
-// do i need to fetch the data again? where id=what?
-
-// server js and postspage.jsx
