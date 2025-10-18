@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import "./DestinationReview.css";
 
 export function DestinationReview() {
   const [reviews, setReviews] = useState([]);
@@ -20,9 +21,9 @@ export function DestinationReview() {
 
   return (
     <div>
-      <h2>Reviews:</h2>
+      <h3>Reviews:</h3>
       {reviews.map((review) => (
-        <div key={review.id}>
+        <div key={review.id} className="review-container">
           <p>Name: {review.name}</p>
           <p>Comment: {review.comment}</p>
         </div>
