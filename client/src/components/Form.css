@@ -19,7 +19,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  background-color: #fff3cf;
+  background-color: #dedcff;
   margin: 0.5rem;
   border-radius: 5px;
   padding: 0.5rem;
@@ -33,4 +33,11 @@ form {
   color: #45458b;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+  background-color: #fce397;
+  border: solid 0.2rem white;
+}
+
+label {
+  font-size: 0.9rem;
 }
