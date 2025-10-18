@@ -8,7 +8,9 @@ export function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:8080");
+      const response = await fetch(
+        "https://wk07-assignment-server-rryl.onrender.com"
+      );
       const data = await response.json();
       setDestinations(data);
     }

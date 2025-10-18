@@ -11,7 +11,7 @@ export function DestinationReview() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `http://localhost:8080/destination/${destinationId}`
+        `https://wk07-assignment-server-rryl.onrender.com/destination/${destinationId}`
       );
       const data = await response.json();
       setReviews(data.reviews);
