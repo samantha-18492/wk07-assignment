@@ -1,3 +1,5 @@
+import "./About.css";
+
 export function About() {
   return (
     <section>
@@ -18,6 +20,10 @@ export function About() {
         So take a scroll, find your next getaway, and see where Wanderly takes
         you.
       </p>
+      <img
+        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+        alt="Brown wooden boat on a lake moving towards a mountain"
+      />
     </section>
   );
 }

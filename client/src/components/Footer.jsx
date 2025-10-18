@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 export function Footer() {
-  return <p>© Samantha Parkes</p>;
+  return <footer>© Samantha Parkes</footer>;
 }

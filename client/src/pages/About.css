@@ -1,0 +1,11 @@
+img {
+  width: 70vw;
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  img {
+    width: 40vw;
+    height: auto;
+  }
+}
