@@ -15,11 +15,14 @@ export function Form() {
     e.preventDefault();
     console.log(`Destination Id: ${destinationId}`);
 
-    await fetch(`http://localhost:8080/destination/${destinationId}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formValues),
-    });
+    await fetch(
+      `https://wk07-assignment-server-rryl.onrender.com/destination/${destinationId}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formValues),
+      }
+    );
   }
 
   function handleChange(e) {
