@@ -3,9 +3,16 @@ img {
   height: auto;
 }
 
+h2 {
+  font-size: 1.8rem;
+  color: #45458b;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+}
+
 @media (min-width: 800px) {
   img {
-    width: 40vw;
+    width: 30vw;
     height: auto;
   }
 }

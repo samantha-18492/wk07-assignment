@@ -25,10 +25,7 @@ export function Home() {
 
   return (
     <section>
-      <p>
-        I want to add a button here which allows a user to filter destinations
-        by type and duration
-      </p>
+      <h2>Destinations</h2>
       <div>
         <label>Sort by: </label>
         <select
@@ -44,7 +41,7 @@ export function Home() {
         <Link to={`/destination/${destination.id}`} key={destination.id}>
           <button>
             <img src={destination.image_url} alt={destination.image_alt} />
-            <p>
+            <p className="p-destination">
               Destination: {destination.city}, {destination.country}
             </p>
             <p>Type: {destination.type}</p>

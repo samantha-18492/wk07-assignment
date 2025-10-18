@@ -8,9 +8,23 @@ button {
 }
 
 button:hover {
-  background-color: #fcf3d9;
+  /* background-color: #fcf3d9; */
+  /* border: solid 0.3rem; */
+  /* transform: scale(1.01); */
+  border: solid 0.2rem #646cff;
+  background-color: white;
 }
 
 .link {
   color: #45458b;
+}
+
+.p-destination {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #213547;
 }

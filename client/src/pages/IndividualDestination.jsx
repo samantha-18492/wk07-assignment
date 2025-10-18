@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router";
 import { Form } from "../components/Form";
+import "./IndividualDestination.css";
 
 export function IndividualDestination() {
   const [destinationInfo, setDestinationInfo] = useState({});
@@ -21,7 +22,7 @@ export function IndividualDestination() {
   }, [destinationId]);
 
   return (
-    <div>
+    <section>
       {destinationInfo ? (
         <div key={destinationInfo.id}>
           <img
@@ -38,19 +39,19 @@ export function IndividualDestination() {
             <p>Noteworthy landmarks: {destinationInfo.landmarks}</p>
           </div>
           <Form />
-          <Link to="/">
+          <Link to="/" className="back-button">
             <button>Back</button>
           </Link>
         </div>
       ) : (
         <div>
           <p>No destination was found</p>
-          <Link to="/">
+          <Link to="/" className="back-button">
             <button>Back</button>
           </Link>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 

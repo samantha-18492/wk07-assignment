@@ -3,7 +3,7 @@ import "./About.css";
 export function About() {
   return (
     <section>
-      <h1>About us</h1>
+      <h2>About us</h2>
       <p>
         We believe that every great trip begins with a spark of inspiration. Our
         mission is to make discovering your next destination effortless and
