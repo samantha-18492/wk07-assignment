@@ -1,6 +1,5 @@
 * {
   margin: 0px;
-  margin-top: 1rem;
 }
 
 .form-container {
@@ -20,7 +19,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  background-color: pink;
+  background-color: #fff3cf;
   margin: 0.5rem;
   border-radius: 5px;
   padding: 0.5rem;
