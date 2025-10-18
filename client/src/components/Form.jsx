@@ -27,6 +27,7 @@ export function Form() {
 
   return (
     <div>
+      <DestinationReview />
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
@@ -47,7 +48,6 @@ export function Form() {
         <button type="submit"> Submit review</button>
         {console.log(formValues)}
       </form>
-      <DestinationReview />
     </div>
   );
 }
