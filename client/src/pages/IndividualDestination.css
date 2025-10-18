@@ -32,14 +32,13 @@ section {
   text-align: left;
 }
 
-.back-button {
-  background-color: #45458b;
-  color: white;
-  margin: 1rem;
-}
-
-.back-button:hover {
-  background-color: #fcf3d9;
+.destination-info-title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #45458b;
+  letter-spacing: 0.2rem;
 }
 
 .link {

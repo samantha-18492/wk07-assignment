@@ -42,10 +42,9 @@ export function Form() {
               onChange={handleChange}
             />
           </div>
-          <div>
+          <div className="form-input-field">
             <label htmlFor="comment">Review </label>
-            <input
-              type="text"
+            <textarea
               id="comment"
               name="comment"
               placeholder="Tell others what you thought"

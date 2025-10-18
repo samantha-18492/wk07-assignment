@@ -35,8 +35,8 @@ export function IndividualDestination() {
               className="destination-image"
             />
             <div className="destination-info">
-              <p className="destination-info-text">
-                Destination: {destinationInfo.city}, {destinationInfo.country}
+              <p className="destination-info-title">
+                {destinationInfo.city}, {destinationInfo.country}
               </p>
               <p className="destination-info-text">
                 Type: {destinationInfo.type}
@@ -60,8 +60,8 @@ export function IndividualDestination() {
       ) : (
         <div>
           <p>No destination was found</p>
-          <Link to="/" className="back-button">
-            <button>Back</button>
+          <Link to="/">
+            <button className="back-button">Back</button>
           </Link>
         </div>
       )}

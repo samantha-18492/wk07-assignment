@@ -5,6 +5,7 @@
 .form-container {
   border: solid #45458b 2px;
   border-radius: 5px;
+  margin-top: 1rem;
 }
 
 .write-review-container {
@@ -40,4 +41,13 @@ form {
 
 label {
   font-size: 0.9rem;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.form-input-field {
+  display: flex;
+  align-items: flex-start;
 }
