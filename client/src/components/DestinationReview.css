@@ -1,3 +1,29 @@
 .review-container {
-  width: 500px;
+  /* width: 500px; */
+  border: solid #45458b 2px;
+  border-radius: 5px;
+}
+
+.individual-review {
+  background-color: #fce397;
+  margin: 0.5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #45458b;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+* {
+  margin: 0px;
+}
+
+.review-name {
+  font-style: italic;
+  text-align: right;
 }

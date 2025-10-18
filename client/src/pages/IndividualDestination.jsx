@@ -24,19 +24,33 @@ export function IndividualDestination() {
   return (
     <section>
       {destinationInfo ? (
-        <div key={destinationInfo.id}>
-          <img
-            src={destinationInfo.image_url}
-            alt={destinationInfo.image_alt}
-          />
-          <div>
-            <p>
-              Destination: {destinationInfo.city}, {destinationInfo.country}
-            </p>
-            <p>Type: {destinationInfo.type}</p>
-            <p>Duration: {destinationInfo.duration}</p>
-            <p>{destinationInfo.description}</p>
-            <p>Noteworthy landmarks: {destinationInfo.landmarks}</p>
+        <div
+          key={destinationInfo.id}
+          className="individual-destination-container"
+        >
+          <div className="destination-top">
+            <img
+              src={destinationInfo.image_url}
+              alt={destinationInfo.image_alt}
+              className="destination-image"
+            />
+            <div className="destination-info">
+              <p className="destination-info-text">
+                Destination: {destinationInfo.city}, {destinationInfo.country}
+              </p>
+              <p className="destination-info-text">
+                Type: {destinationInfo.type}
+              </p>
+              <p className="destination-info-text">
+                Duration: {destinationInfo.duration}
+              </p>
+              <p className="destination-info-text">
+                {destinationInfo.description}
+              </p>
+              <p className="destination-info-text">
+                Noteworthy landmarks: {destinationInfo.landmarks}
+              </p>
+            </div>
           </div>
           <Form />
           <Link to="/" className="back-button">

@@ -20,12 +20,12 @@ export function DestinationReview() {
   }, [destinationId]);
 
   return (
-    <div>
-      <h3>Reviews:</h3>
+    <div className="review-container">
+      <h3>Destination reviews</h3>
       {reviews.map((review) => (
-        <div key={review.id} className="review-container">
-          <p>Name: {review.name}</p>
-          <p>Comment: {review.comment}</p>
+        <div key={review.id} className="individual-review">
+          <p className="review-comment">"{review.comment}"</p>
+          <p className="review-name">{review.name}</p>
         </div>
       ))}
     </div>

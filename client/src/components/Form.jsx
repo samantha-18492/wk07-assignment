@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router";
 import { DestinationReview } from "./DestinationReview";
+import "./Form.css";
 
 export function Form() {
   const params = useParams();
@@ -26,28 +27,38 @@ export function Form() {
   }
 
   return (
-    <div>
+    <section>
       <DestinationReview />
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="e.g.Sam"
-          onChange={handleChange}
-        />
-        <label htmlFor="comment">Comment</label>
-        <input
-          type="text"
-          id="comment"
-          name="comment"
-          placeholder="Tell others what you thought"
-          onChange={handleChange}
-        />
-        <button type="submit"> Submit review</button>
-        {console.log(formValues)}
-      </form>
-    </div>
+      <div className="form-container">
+        <h3>Write a review</h3>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name">Name </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g.Sam"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="comment">Review </label>
+            <input
+              type="text"
+              id="comment"
+              name="comment"
+              placeholder="Tell others what you thought"
+              onChange={handleChange}
+            />
+          </div>
+          <button type="submit" className="submit-button">
+            {" "}
+            Submit
+          </button>
+          {console.log(formValues)}
+        </form>
+      </div>
+    </section>
   );
 }
