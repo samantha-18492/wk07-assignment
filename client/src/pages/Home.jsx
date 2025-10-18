@@ -39,7 +39,7 @@ export function Home() {
       </div>
       {destinations.map((destination) => (
         <Link to={`/destination/${destination.id}`} key={destination.id}>
-          <button>
+          <button className="destination-container">
             <img src={destination.image_url} alt={destination.image_alt} />
             <p className="p-destination">
               Destination: {destination.city}, {destination.country}

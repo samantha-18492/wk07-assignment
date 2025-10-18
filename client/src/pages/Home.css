@@ -2,15 +2,12 @@ section {
   margin-top: 4em;
 }
 
-button {
+.destination-container {
   border: solid 0.2rem #45458b;
   margin: 1rem;
 }
 
-button:hover {
-  /* background-color: #fcf3d9; */
-  /* border: solid 0.3rem; */
-  /* transform: scale(1.01); */
+.destination-container:hover {
   border: solid 0.2rem #646cff;
   background-color: white;
 }
